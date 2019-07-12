@@ -35,44 +35,44 @@
 
 # Naive method
 
-class Solution:
-    def longestPalindrome(self, s: str) -> str:  
-        center, length, longest, lps = 1, 0, 0, ''
-        if len(s) == 0 or len(s) == 1: 
-            lps = s
-            return lps
-        elif len(s) == 2 and s[0] == s[1]:
-            return s
-        elif len(s) == 2 and s[0] != s[1]:
-            return s[0]
-        while center < len(s) - 1:
-            length = 0
-            if s[center] == s[center - 1]:
-                i, j = center - 1, center
-                length = 0
-                while i >= 0 and j < len(s) and s[i] == s[j]:
-                    i, j = i - 1, j + 1
-                    length += 2
-                if length > longest:
-                    lps = s[i+1:j]
-                    longest = length
-            if s[center-1] == s[center+1]:
-                i, j = center - 1, center + 1
-                length = 1
-                while i >= 0 and j < len(s) and s[i] == s[j]:
-                    i, j = i - 1, j + 1
-                    length += 2     
-                if length > longest:
-                    lps = s[i+1:j]
-                    longest = length            
-            center += 1
-        if longest < 2:
-            if s[center] == s[center-1]:
-                lps = s[center-1: center+1]
-            else:
-                return s[0]
+# class Solution:
+#     def longestPalindrome(self, s: str) -> str:  
+#         center, length, longest, lps = 1, 0, 0, ''
+#         if len(s) == 0 or len(s) == 1: 
+#             lps = s
+#             return lps
+#         elif len(s) == 2 and s[0] == s[1]:
+#             return s
+#         elif len(s) == 2 and s[0] != s[1]:
+#             return s[0]
+#         while center < len(s) - 1:
+#             length = 0
+#             if s[center] == s[center - 1]:
+#                 i, j = center - 1, center
+#                 length = 0
+#                 while i >= 0 and j < len(s) and s[i] == s[j]:
+#                     i, j = i - 1, j + 1
+#                     length += 2
+#                 if length > longest:
+#                     lps = s[i+1:j]
+#                     longest = length
+#             if s[center-1] == s[center+1]:
+#                 i, j = center - 1, center + 1
+#                 length = 1
+#                 while i >= 0 and j < len(s) and s[i] == s[j]:
+#                     i, j = i - 1, j + 1
+#                     length += 2     
+#                 if length > longest:
+#                     lps = s[i+1:j]
+#                     longest = length            
+#             center += 1
+#         if longest < 2:
+#             if s[center] == s[center-1]:
+#                 lps = s[center-1: center+1]
+#             else:
+#                 return s[0]
             
-        return lps      
+#         return lps      
 
 # ✔ Accepted
 #   ✔ 103/103 cases passed (1024 ms)
@@ -106,6 +106,37 @@ class Solution:
 #   ✔ 103/103 cases passed (4012 ms)
 #   ✔ Your runtime beats 30.05 % of python3 submissions
 #   ✔ Your memory usage beats 10.65 % of python3 submissions (21.8 MB)
+
+
+
+
+
+
+class Solution:
+    def longestPalindrome(self, s):
+        res = ""
+        for i in range(len(s)):
+            # odd case, like "aba"
+            tmp = self.helper(s, i, i)
+            if len(tmp) > len(res):
+                res = tmp
+            # even case, like "abba"
+            tmp = self.helper(s, i, i+1)
+            if len(tmp) > len(res):
+                res = tmp
+        return res
+    
+    # get the longest palindrome, l, r are the middle indexes   
+    # from inner to outer
+    def helper(self, s, l, r):
+        while l >= 0 and r < len(s) and s[l] == s[r]:
+            l -= 1; r += 1
+        return s[l+1:r]
+        
+# ✔ Accepted
+#   ✔ 103/103 cases passed (928 ms)
+#   ✔ Your runtime beats 70.72 % of python3 submissions
+#   ✔ Your memory usage beats 86.73 % of python3 submissions (13.1 MB)
 
 
 # if __name__ == '__main__':
