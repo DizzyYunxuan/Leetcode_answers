@@ -17,7 +17,6 @@ class Solution:
             else:
                 break
         ss = s[0] + ss
-        print(ss)
         try:
             res = int(float(ss))
             if res > 2**31 - 1 or res < -2**31:
