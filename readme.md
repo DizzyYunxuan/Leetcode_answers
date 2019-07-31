@@ -2,4 +2,4 @@
 
 ## Authors
 
-* **DizzyYunxuan** - *Initial work* -  [DizzyYunxuan](https://github.com/DizzyYunxuan)
+* **DizzyYunxuan** - *Initial work* - [DizzyYunxuan](https://github.com/DizzyYunxuan)
