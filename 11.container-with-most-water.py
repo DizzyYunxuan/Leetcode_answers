@@ -17,8 +17,7 @@ class Solution:
                 if min(height[l], height[r]) * (r - l) > res: 
                     res = min(height[l], height[r]) * (r - l)
         return res
-
-
-# if __name__ == '__main__':
-#     res = Solution().maxArea([2,3,4,5,18,17,6])
-#     print(res)
+# ✔ Accepted
+#   ✔ 50/50 cases passed (140 ms)
+#   ✔ Your runtime beats 76.38 % of python3 submissions
+#   ✔ Your memory usage beats 5.04 % of python3 submissions (15.5 MB)
