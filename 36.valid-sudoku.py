@@ -35,8 +35,8 @@ class Solution:
                         return False
         
         return True
-# ✔ Accepted
-#   ✔ 504/504 cases passed (108 ms)
-#   ✔ Your runtime beats 77.39 % of python3 submissions
-#   ✔ Your memory usage beats 5.88 % of python3 submissions (13.8 MB)
+✔ Accepted
+  ✔ 504/504 cases passed (104 ms)
+  ✔ Your runtime beats 91.28 % of python3 submissions
+  ✔ Your memory usage beats 5.88 % of python3 submissions (13.8 MB)
 
