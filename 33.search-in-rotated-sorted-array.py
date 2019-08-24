@@ -24,6 +24,10 @@ class Solution:
                     return -1
                 i -= 1
         return -1
+✔ Accepted
+  ✔ 196/196 cases passed (40 ms)
+  ✔ Your runtime beats 99.01 % of python3 submissions
+  ✔ Your memory usage beats 6.29 % of python3 submissions (14.1 MB)
 # class Solution:
 #     def search(self, nums, target: int) -> int:
 #         try:
@@ -35,6 +39,7 @@ class Solution:
 #   ✔ 196/196 cases passed (52 ms)
 #   ✔ Your runtime beats 46.11 % of python3 submissions
 #   ✔ Your memory usage beats 6.29 % of python3 submissions (14 MB)
+
 # if __name__ == '__main__':
 #     res = Solution().search([1], 0)
 #     print(res)
