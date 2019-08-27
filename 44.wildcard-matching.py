@@ -17,10 +17,11 @@ class Solution:
                     dp[i][j] = dp[i][j-1] | dp[i-1][j]
                 elif p[i-1] == s[j-1] or p[i-1] == '?':
                     dp[i][j] = dp[i-1][j-1]
-
-
         return dp[-1][-1]
-
+✔ Accepted
+  ✔ 1809/1809 cases passed (788 ms)
+  ✔ Your runtime beats 50.83 % of python3 submissions
+  ✔ Your memory usage beats 50 % of python3 submissions (22 MB)
 # if __name__ == "__main__":
 #     # res = Solution().isMatch('adceb', '*a*b')
 #     res = Solution().isMatch('aa', '*')
