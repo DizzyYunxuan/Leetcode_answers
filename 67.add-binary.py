@@ -4,12 +4,14 @@
 # [67] Add Binary
 #
 class Solution:
-    # def addBinary(self, a: str, b: str) -> str:
-        # return bin(int(a, 2) + int(b, 2))[2:]
-#     ✔ Accepted
-#   ✔ 294/294 cases passed (32 ms)
-#   ✔ Your runtime beats 97.88 % of python3 submissions
-#   ✔ Your memory usage beats 5.41 % of python3 submissions (13.8 MB)
+    def addBinary(self, a: str, b: str) -> str:
+        return bin(int(a, 2) + int(b, 2))[2:]
+    ✔ Accepted
+  ✔ 294/294 cases passed (32 ms)
+  ✔ Your runtime beats 97.88 % of python3 submissions
+  ✔ Your memory usage beats 5.41 % of python3 submissions (13.8 MB)
+    
+    
     def addBinary(self, a: str, b: str) -> str:
         la, lb = len(a), len(b)
         if la >= lb:

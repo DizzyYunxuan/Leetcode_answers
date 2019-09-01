@@ -16,5 +16,10 @@ class Solution:
         if carry:
             digits.insert(0, 1)
         return digits
+✔ Accepted
+  ✔ 109/109 cases passed (40 ms)
+  ✔ Your runtime beats 59.85 % of python3 submissions
+  ✔ Your memory usage beats 5.13 % of python3 submissions (14 MB)
+    
 # if __name__ == "__main__":
 #     res = Solution().plusOne([9,9])
