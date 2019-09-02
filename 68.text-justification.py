@@ -44,7 +44,10 @@ class Solution:
                     # spaces -= 
                 res.append(curStr)
         return res
-
+✔ Accepted
+  ✔ 27/27 cases passed (28 ms)
+  ✔ Your runtime beats 99.34 % of python3 submissions
+  ✔ Your memory usage beats 25 % of python3 submissions (14 MB)
                 
         
             
