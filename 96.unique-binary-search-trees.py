@@ -12,7 +12,10 @@ class Solution:
             for j in range(i):
                 dp[i] += dp[j] * dp[i-j-1]
         return dp[-1]
-
+✔ Accepted
+  ✔ 19/19 cases passed (36 ms)
+  ✔ Your runtime beats 66.44 % of python3 submissions
+  ✔ Your memory usage beats 10.71 % of python3 submissions (14 MB)
             
 # if __name__ == "__main__":
 #     res = Solution().numTrees(4)

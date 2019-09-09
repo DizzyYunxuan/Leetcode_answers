@@ -4,13 +4,13 @@
 # [65] Valid Number
 #
 class Solution:
-    # def isNumber(self, s: str) -> bool:
-    #     s = s.strip()
-    #     try:
-    #         a = float(s)
-    #     except ValueError:
-    #         return False
-    #     return True
+    def isNumber(self, s: str) -> bool:
+        s = s.strip()
+        try:
+            a = float(s)
+        except ValueError:
+            return False
+        return True
 #     ✔ Accepted
 #   ✔ 1481/1481 cases passed (32 ms)
 #   ✔ Your runtime beats 97.84 % of python3 submissions

@@ -29,7 +29,6 @@ class Solution:
 #   ✔ 231/231 cases passed (44 ms)
 #   ✔ Your runtime beats 59.82 % of python3 submissions
 #   ✔ Your memory usage beats 6.45 % of python3 submissions (13.9 MB)
-    def rotateRight(self, head: ListNode, k: int) -> ListNode:
         
 
 
