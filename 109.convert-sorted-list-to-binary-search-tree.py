@@ -32,7 +32,10 @@ class Solution:
         root.left = self.sortedListToBST(head)
         root.right = self.sortedListToBST(tmp.next)
         return root
-
+✔ Accepted
+  ✔ 32/32 cases passed (140 ms)
+  ✔ Your runtime beats 45.73 % of python3 submissions
+  ✔ Your memory usage beats 53.33 % of python3 submissions (17.5 MB)
 
 #     def sortedListToBST(self, head: ListNode) -> TreeNode:
 #         worker, l = head, []
