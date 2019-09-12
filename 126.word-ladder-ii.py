@@ -8,7 +8,7 @@ class Solution:
         from collections import defaultdict
         if endWord not in wordList: return []
         forward,backward,wordList,dic = {beginWord},{endWord},set(wordList),defaultdict(set)
-        flag,letters,length = True,set('qwertyuioplkjhgfdsazxcvbnm'),len(endWord)
+        flag,letters,length = True, set('qwertyuioplkjhgfdsazxcvbnm'), len(endWord)
         while forward:
             if len(forward) > len(backward):
                 forward,backward,flag = backward,forward,not flag
@@ -30,13 +30,10 @@ class Solution:
                 return res
             forward = cur
         return []
-# '"qa"\n"sq"\n["si","go","se","cm","so","ph","mt","db","mb","sb","kr","ln","tm","le","av","sm","ar","ci","ca","br","ti","ba","to","ra","fa","yo","ow","sn","ya","cr","po","fe","ho","ma","re","or","rn","au","ur","rh","sr","tc","lt","lo","as","fr","nb","yb","if","pb","ge","th","pm","rb","sh","co","ga","li","ha","hz","no","bi","di","hi","qa","pi","os","uh","wm","an","me","mo","na","la","st","er","sc","ne","mn","mi","am","ex","pt","io","be","fm","ta","tb","ni","mr","pa","he","lr","sq","ye"]
-# "red"\n"tax"\n["ted","tex","red","tax","tad","den","rex","pee"]
 # if __name__ == "__main__":
 #     beginWord = "hit"
 #     endWord = "cog"
 #     wordList = ["hot","dot","dog","lot","log","cog"]
-#     # wordList = ["si","go","se","cm","so","ph","mt","db","mb","sb","kr","ln","tm","le","av","sm","ar","ci","ca","br","ti","ba","to","ra","fa","yo","ow","sn","ya","cr","po","fe","ho","ma","re","or","rn","au","ur","rh","sr","tc","lt","lo","as","fr","nb","yb","if","pb","ge","th","pm","rb","sh","co","ga","li","ha","hz","no","bi","di","hi","qa","pi","os","uh","wm","an","me","mo","na","la","st","er","sc","ne","mn","mi","am","ex","pt","io","be","fm","ta","tb","ni","mr","pa","he","lr","sq","ye"]
 #     res = Solution().findLadders(beginWord, endWord, wordList)
 #     print(res)
 
