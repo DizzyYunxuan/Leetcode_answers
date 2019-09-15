@@ -5,20 +5,31 @@
 #
 class Solution:
     def candy(self, ratings) -> int:
-        res = [1] * len(ratings)
+        res, des, pre = 1, 0, 1
         for i in range(1, len(ratings)):
-            if ratings[i] > ratings[i-1]:
-                res[i] += 1
-            elif ratings[i] == ratings[i-1]:
-                res[i] = 1
+            if ratings[i-1] <= ratings[i]:
+                if des > 0:
+                    res += ((1 + des) * des) // 2  
+                    if pre <= des:
+                        res += des-pre+1   
+                    pre = 1
+                    des = 0
+                if ratings[i-1] == ratings[i]:
+                    pre = 1
+                else:
+                    pre += 1
+                res += pre
             else:
-                res[i] -= 1
-        s = 0
-        if 0 in res:
-            for i in res:
-                s += i+1
-        return s
-
+                des += 1
+        if des > 0:
+            res += ((1 + des) * des) // 2  
+            if pre <= des:
+                res += des-pre+1  
+        return res
+✔ Accepted
+  ✔ 48/48 cases passed (176 ms)
+  ✔ Your runtime beats 92.01 % of python3 submissions
+  ✔ Your memory usage beats 40 % of python3 submissions (16.2 MB)
 
 # if __name__ == "__main__":
 #     res = Solution().candy([1,3,2,2,1])
