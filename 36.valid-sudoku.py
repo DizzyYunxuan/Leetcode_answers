@@ -32,11 +32,25 @@ class Solution:
                     if k != '.' and k not in checkbox:
                         checkbox[k] = 1
                     elif k in checkbox:
-                        return False
-        
+                        return False      
         return True
-✔ Accepted
-  ✔ 504/504 cases passed (104 ms)
-  ✔ Your runtime beats 91.28 % of python3 submissions
-  ✔ Your memory usage beats 5.88 % of python3 submissions (13.8 MB)
+
+if __name__ == "__main__":
+    board = [
+  ["5","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
+]
+    res = Solution().isValidSudoku(board)
+
+# ✔ Accepted
+#   ✔ 504/504 cases passed (100 ms)
+#   ✔ Your runtime beats 97.83 % of python3 submissions
+#   ✔ Your memory usage beats 5.88 % of python3 submissions (13.7 MB)
 

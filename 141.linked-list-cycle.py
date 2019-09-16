@@ -19,11 +19,11 @@ class Solution:
                 fast = fast.next.next
             return True
         except:
-            return False
-    
-    
-    
-    
+            return False   
+✔ Accepted
+  ✔ 17/17 cases passed (44 ms)
+  ✔ Your runtime beats 99.21 % of python3 submissions
+  ✔ Your memory usage beats 100 % of python3 submissions (17 MB)
 #     def hasCycle(self, head: ListNode) -> bool:
 #         m = []
 #         worker = head

@@ -19,10 +19,10 @@ class Solution:
                 else:
                     dp[i][j] = 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1])
         return dp[-1][-1]
-✔ Accepted
-  ✔ 1146/1146 cases passed (176 ms)
-  ✔ Your runtime beats 72.33 % of python3 submissions
-  ✔ Your memory usage beats 15.38 % of python3 submissions (17.5 MB)
-# if __name__ == "__main__":
-#     res = Solution().minDistance('horse', 'ros')      
+# ✔ Accepted
+#   ✔ 1146/1146 cases passed (176 ms)
+#   ✔ Your runtime beats 72.33 % of python3 submissions
+#   ✔ Your memory usage beats 15.38 % of python3 submissions (17.5 MB)
+if __name__ == "__main__":
+    res = Solution().minDistance('FreshMeat', 'FishAndMeat')      
 
