@@ -13,4 +13,7 @@ class Solution:
             else:
                 high = mid if nums[high] != nums[mid] else high - 1
         return nums[low]
-
+✔ Accepted
+  ✔ 192/192 cases passed (64 ms)
+  ✔ Your runtime beats 58.96 % of python3 submissions
+  ✔ Your memory usage beats 5.88 % of python3 submissions (14.3 MB)
