@@ -6,7 +6,10 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         return len(set(zip(s, t))) == len(set(s)) == len(set(t))
-
+✔ Accepted
+  ✔ 30/30 cases passed (40 ms)
+  ✔ Your runtime beats 92.65 % of python3 submissions
+  ✔ Your memory usage beats 17.5 % of python3 submissions (14 MB)
 
 
 #     def isIsomorphic(self, s: str, t: str) -> bool:
