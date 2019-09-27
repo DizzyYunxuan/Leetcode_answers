@@ -12,16 +12,16 @@
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        self.path = []
-        self.dfs(root, p, [])
-        self.dfs(root, q, [])
-
-    def dfs(self, root, key, path):
-        if root == key:
-            self.path.append(path)
-            return
-        if key.val < root.val:
-            self.dfs(root.left, key, path + [root])
+        if not root or not q or not p:
+            return 
+        
+        if max(q.val, p.val) < root.val:
+            return self.lowestCommonAncestor(root.left, p, q)
+        elif min(q.val, p.val) > root.val:
+            return self.lowestCommonAncestor(root.right,p, q)
         else:
-            self.dfs(root.right, key, path + [root])
-
+            return root
+✔ Accepted
+  ✔ 27/27 cases passed (88 ms)
+  ✔ Your runtime beats 68.98 % of python3 submissions
+  ✔ Your memory usage beats 5.55 % of python3 submissions (17.9 MB)
