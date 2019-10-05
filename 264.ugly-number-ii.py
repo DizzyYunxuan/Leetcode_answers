@@ -19,9 +19,9 @@ class Solution:
             dp.append(umin)
             n -= 1
         return dp[-1]
-✔ Accepted
-  ✔ 596/596 cases passed (156 ms)
-  ✔ Your runtime beats 76.23 % of python3 submissions
-  ✔ Your memory usage beats 20 % of python3 submissions (13.9 MB)
-# if __name__ == "__main__":
-#     res = Solution().nthUglyNumber(10)
+# ✔ Accepted
+#   ✔ 596/596 cases passed (156 ms)
+#   ✔ Your runtime beats 76.23 % of python3 submissions
+#   ✔ Your memory usage beats 20 % of python3 submissions (13.9 MB)
+if __name__ == "__main__":
+    res = Solution().nthUglyNumber(10)
