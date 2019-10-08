@@ -27,6 +27,10 @@ class Solution:
     def mergeAndGetMaxres(self, nums1, nums2):
         return [max(nums1, nums2).pop(0) for _ in nums1+nums2]
 
+Accepted
+102/102 cases passed (364 ms)
+Your runtime beats 77.91 % of python3 submissions
+Your memory usage beats 20 % of python3 submissions (13.9 MB)
 
 
 # if __name__ == "__main__":
