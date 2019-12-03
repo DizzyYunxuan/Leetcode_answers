@@ -23,6 +23,10 @@ class Solution:
         right = self.dfs(root.right)
         return [root.val + left[1] + right[1], max(left) + max(right)]
 
+Accepted
+124/124 cases passed (52 ms)
+Your runtime beats 80.24 % of python3 submissions
+Your memory usage beats 100 % of python3 submissions (14.9 MB)
 
 # if __name__ == "__main__":
 #     root = TreeNode(3)
@@ -33,10 +37,5 @@ class Solution:
 #     res = Solution().rob(root)
 #     print(res)
 
-    
-    
-    
-    
-    
     # @lc code=end
 
