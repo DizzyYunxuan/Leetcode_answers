@@ -18,7 +18,10 @@ class Solution:
         for i in range(bot, bot-up, -1):
             res *= i
         return res
-
+Accepted
+9/9 cases passed (28 ms)
+Your runtime beats 89.16 % of python3 submissions
+Your memory usage beats 100 % of python3 submissions (12.6 MB)
 
 # @lc code=end
 
