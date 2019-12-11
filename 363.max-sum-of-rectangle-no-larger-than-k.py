@@ -23,7 +23,10 @@ class Solution:
                         res = max(res, cr-l[loc])
                     bisect.insort(l, cr)
         return res
-
+Accepted
+27/27 cases passed (948 ms)
+Your runtime beats 75.3 % of python3 submissions
+Your memory usage beats 75 % of python3 submissions (13.7 MB)
 
 # if __name__ == "__main__":
 #     matrix = [[1,0,1],[0,-2,3]]
