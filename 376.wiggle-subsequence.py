@@ -7,34 +7,41 @@
 # @lc code=start
 class Solution:
     def wiggleMaxLength(self, nums) -> int:
-        if len(nums) < 1: return len(nums)
-        res = 0
-        for start in range(len(nums)):
-            sq = nums[start]
-            aOrd, l = True, 1
-            for j in range(start+1, len(nums)):
-                if l < 2 and nums[j] != sq:
-                    if nums[j] - sq < 0:
-                        aOrd = True
-                    elif nums[j] - sq > 0:
-                        aOrd = False
-                    sq = nums[j]
-                    l += 1
-                    continue
+        if len(nums) < 2: return len(nums)
+        up, down = 1, 1
+        for i in range(1, len(nums)):
+            if nums[i] > nums[i-1]:
+                up = down + 1
+            elif nums[i] < nums[i-1]:
+                down = up + 1
+        return max(up, down)
 
-                if nums[j] - sq > 0 and aOrd:
-                    sq = nums[j]
-                    aOrd = False
-                    l += 1
-                elif nums[j] - sq < 0 and not aOrd:
-                    sq = nums[j]
-                    aOrd = True
-                    l += 1
-            res = max(res, l)
-        return res
+Accepted
+27/27 cases passed (32 ms)
+Your runtime beats 86.76 % of python3 submissions
+Your memory usage beats 100 % of python3 submissions (12.8 MB)
 
-if __name__ == "__main__":
-    res = Solution().wiggleMaxLength([1,7,4,9,2,5])   
+
+
+
+
+
+    # def wiggleMaxLength(self, nums) -> int:
+    #     if len(nums) < 2: return len(nums)
+    #     return max(1 + self.calculate(nums, 0, True), 1 + self.calculate(nums, 0, False))
+    
+    # def calculate(self, nums, start, isUp):
+    #     maxlen = 0
+    #     for i in range(start+1, len(nums)):
+    #         if (isUp and nums[i] > nums[start]) or (not isUp and nums[i] < nums[start]):
+    #             maxlen = max(maxlen, 1 + self.calculate(nums, i, not isUp)) 
+    #     return maxlen
+    # Time Limit Exceeded
+
+
+
+# if __name__ == "__main__":
+#     res = Solution().wiggleMaxLength([1,7,4,9,2,5])   
             
 
 # @lc code=end
