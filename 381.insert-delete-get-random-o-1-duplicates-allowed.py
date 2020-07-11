@@ -26,41 +26,25 @@ class RandomizedCollection:
         """
         Inserts a value to the collection. Returns true if the collection did not already contain the specified element.
         """
-<<<<<<< HEAD
-        
-=======
         if val in self.d:
             return False
         self.d[val] = len(self.l)
         self.l.append(val)
         return True
->>>>>>> 0739e97a0d9fd2b36a9817ce96f16e8992944020
 
     def remove(self, val: int) -> bool:
         """
         Removes a value from the collection. Returns true if the collection contained the specified element.
         """
-<<<<<<< HEAD
-        
-=======
         if self.d.get(val, 0):
             self.d[val] -= 1 
             return True
         return False
->>>>>>> 0739e97a0d9fd2b36a9817ce96f16e8992944020
 
     def getRandom(self) -> int:
         """
         Get a random element from the collection.
         """
-<<<<<<< HEAD
-        
-
-
-# Your RandomizedCollection object will be instantiated and called as such:
-# obj = RandomizedCollection()
-# param_1 = obj.insert(val)
-=======
         l = []
         for k, v in self.d.items():
             l += [k] * v
@@ -84,7 +68,6 @@ Your memory usage beats 98.72 % of python3 submissions (17.7 MB)
 # print(obj.getRandom())
 
 # param_1 = obj.getRandom()
->>>>>>> 0739e97a0d9fd2b36a9817ce96f16e8992944020
 # param_2 = obj.remove(val)
 # param_3 = obj.getRandom()
 # @lc code=end
