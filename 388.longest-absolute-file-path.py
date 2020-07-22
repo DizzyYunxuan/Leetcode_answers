@@ -18,6 +18,7 @@ class Solution:
             if s[i] == 'n' and s[i-1] == '\\':
                 if '.' in name:
                     
+                    
                 cur_path.append(name[:-1])
                 j, count = i
                 while s[j] != 'n' and s[j-1] != '\\':
